@@ -1,0 +1,21 @@
+/* Display */
+.dnone { display: none; }
+.dblock { display: block; }
+.dinline { display: inline; }
+.dinlineblock { display: inline-block; }
+.dflex { display: flex; }
+.dgrid { display: grid; }
+.dinlineflex { display: inline-flex;}
+
+
+/* Flexbox */
+.aic { align-items: center; }
+.aie { align-items: end; }
+.jcc { justify-content: center; }
+.jcsb { justify-content: space-between; }
+.jcse { justify-content: space-evenly; }
+.jcsa { justify-content: space-around; }
+.fdc { flex-direction: column; }
+.fdr { flex-direction: row; }
+.fwrap { flex-wrap: wrap; }
+.fnowrap { flex-wrap: nowrap; }
