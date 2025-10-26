@@ -4,14 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BeeClub</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tobiasroeder/lucide-icon-font@main/lucide.css">
+
+
 </head>
 
 <body>
     <header class="header">
-        <nav class="nav container">
-            <a href="#" class="nav__logo" aria-label="BeeClub Logo"></a>
-            <ul class="nav__list">
+        <nav class="nav container dflex aic jcsb">
+            <a href="#" class="nav__logo" aria-label="BeeClub Logo">
+                <svg width="30" height="20" viewBox="0 0 50 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M43 31L31 40H5L7 35L12 31H29L32 35L40 11L45 7H50L43 31ZM43 5L38 9H21L18 5L10 29L5 33H0L7 9L19 0H45L43 5ZM24 13H35L29 31L26 27H15L21 9L24 13Z"
+                        fill="yellow"></path>
+                </svg>&nbsp;BeeCLub</a>
+            <ul class="nav__list dflex">
                 <li class="nav__item"><a href="#" class="nav__link">For Customers</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">For Couriers</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">About</a></li>
@@ -27,43 +37,43 @@
 
     <main>
         <section class="hero">
-            <div class="hero__container container">
-                <div class="hero__text-content">
-                    <h2 class="hero__title">Jeddah's Fastest Delivery App</h2>
+            <div class="hero__container container dflex jcsb">
+                <div class="hero__text-content dflex fdc jcsb">
+                    <div class="hero__title">Jeddah's Fastest <img src="https://picsum.photos/seed/picsum/200/300" alt=""> Delivery App</div>
                     <p class="hero__subheadline">Book delivery in 30 seconds. Track in real-time. Pay how you want.
                         Documents, furniture, packages - we deliver everything across Jeddah.</p>
 
-                    <div class="hero__cta">
+                    <div class="hero__cta dflex aic">
                         <a href="#" class="button button--primary">Get 20% Off Now (30 Days Left)</a>
                         <a href="" class="hero__learn-more">Learn More</a>
                     </div>
-                    <div class="hero__stats">
-                        <div class="stats__item">
+                    <div class="hero__stats dflex aic jcsb">
+                        <div class="stats__item dflex fdc">
                             <span class="stats__number">12.5k+</span>
-                            <span class="stats__label">User Registered</span>
+                            <span class="stats__label">Users Registered</span>
                         </div>
-                        <div class="stats__item">
+                        <div class="stats__item dflex fdc">
                             <span class="stats__number">10+</span>
                             <span class="stats__label">Jeddah Zones</span>
                         </div>
-                        <div class="stats__item">
+                        <div class="stats__item dflex fdc">
                             <span class="stats__number">4.9</span>
                             <span class="stats__label">App Rating</span>
                         </div>
                     </div>
                 </div>
-                <div class="hero__image-content">
+                <div class="hero__image-content dflex">
                     <div class="hero__image-wrapper">
-                        <img src="" alt="BeeClub mobile app preview">
+                        <img src="https://picsum.photos/650/600" alt="BeeClub mobile app preview">
                     </div>
-                    <div class="hero__floating-card hero__floating-card--one">
-                        <span class="hero__floating-card--one-icon"></span>
-                        <div class="hero__floating-card-stats">
+                    <div class="hero__floating-card hero__floating-card--one dflex fdc jcsb">
+                        <span class="hero__floating-card--one-icon"><div class="icon-users"></div></span>
+                        <div class="hero__floating-card-stats dflex fdc">
                             <span class="hfc__stats__number">50k+</span>
                             <span class="hfc__stats__label">Monthly Orders</span>
                         </div>
                     </div>
-                    <div class="hero__floating-card hero__floating-card--two">
+                    <div class="hero__floating-card hero__floating-card--two dflex fdc jcsb">
                         <div class="hfc__card__apps"></div>
                         <div class="hfc__card__text-content">
                             <span class="hfc__card__title">Get The App</span>
@@ -76,14 +86,14 @@
         </section>
 
         <section class="solution">
-            <div class="solution__container container">
+            <div class="solution__container container dflex fdc jcc">
                 <span class="section__tag">What is BeeClub?</span>
                 <h2 class="section__title">INSTANT DELIVERY SOLUTION SPECIAL FOR YOU IN JEDDAH</h2>
                 <div class="solution__video-player">
-                    <img src="#" alt="Video thumbnail">
-                    <button type="button" class="video-player__play-button" aria-label="Play Video"></button>
+                    <img src="assets/images/solution-image.jpeg" alt="Video thumbnail">
+                    <button type="button" class="video-player__play-button" aria-label="Play Video"><div class="play-circle"></div></button>
                 </div>
-                <div class="solution__text-content">
+                <div class="solution__text-content dflex jcsb aic">
                     <p class="solution__desription">BeeClub delivers anything across Jeddah. Book in the app, track your
                         order, get it delivered today. We work 24/7. Price based on loading/unloading time. Drivers are
                         always verified.</p>
@@ -93,62 +103,60 @@
         </section>
 
         <section class="services">
-            <div class="services__container">
+            <div class="services__container container dflex">
                 <div class="services__content">
                     <div class="section__heading">
                         <span class="section__tag">What are our services</span>
                         <h2 class="section__title">Choose Your Delivery Service Type</h2>
                     </div>
-                    <div class="services__accordion-wrapper">
+                    <div class="services__accordion-wrapper dflex fdc jcsb">
                         <div class="accordion__item">
-                            <div class="accordion__header">
-                                <span class="accordion__icon"></span>
-                                <div class="accordion__header-content">
+                            <div class="accordion__header dflex">
+                                <span class="accordion__icon dflex aic jcc"><div class="icon-truck"></div></span>
+                                <div class="accordion__header-content dflex fdc">
                                     <span class="accordion__title">Truck</span>
                                     <p class="accordion__description">Furniture & large items</p>
                                 </div>
                             </div>
                             <div class="accordion__content">
                                 <div class="content__item">
-                                    <!-- place icon with pseudo elements -->
                                     <!-- will place random filler text -->
                                 </div>
                             </div>
                         </div>
                         <div class="accordion__item accordion__item--active">
-                            <div class="accordion__header">
-                                <span class="accordion__icon"></span>
+                            <div class="accordion__header dflex">
+                                <span class="accordion__icon dflex aic jcc"><div class="icon-bike"></div></span>
                                 <div class="accordion__header-content">
                                     <span class="accordion__title">Bike Courier</span>
                                     <p class="accordion__description">Parcels up to 10kg</p>
                                 </div>
                             </div>
-                            <div class="accordion__content">
-                                <!-- TO DO: REvisit the structure; maybe try to reduce markup -->
+                            <div class="accordion__content dflex">
+                                <!-- TO DO: Revisit the structure; maybe try to reduce markup -->
                                 <div class="content__item">
-                                    <!-- place icon with pseudo elements -->
                                     <p class="content__item-text">10 min free wait</p>
                                 </div>
                                 <div class="content__item">
-                                    <!-- place icon with pseudo elements -->
+                                    <div class="check-circle-2"></div>
                                     <p class="content__item-text">Door-to-door</p>
                                 </div>
                                 <div class="content__item">
-                                    <!-- place icon with pseudo elements -->
+                                    <div class="check-circle-2"></div>
                                     <p class="content__item-text">Eco-friendly</p>
                                 </div>
                                 <div class="content__item">
-                                    <!-- place icon with pseudo elements -->
+                                    <div class="check-circle-2"></div>
                                     <p class="content__item-text">Up to 10kg</p>
                                 </div>
                             </div>
                         </div>
                         <div class="accordion__item">
-                            <div class="accordion__header">
-                                <span class="accordion__icon"></span>
+                            <div class="accordion__header dflex">
+                                <span class="accordion__icon dflex aic jcc"><div class="icon-package"></div></span>
                                 <div class="accordion__header-content">
-                                    <span class="accordion__title">Truck</span>
-                                    <p class="accordion__description">Furniture & large items</p>
+                                    <span class="accordion__title">Pickup</span>
+                                    <p class="accordion__description">Parcels up to 500kg</p>
                                 </div>
                             </div>
                             <div class="accordion__content">
@@ -159,24 +167,24 @@
                             </div>
                         </div>
                         <div class="accordion__item">
-                            <div class="accordion__header">
-                                <span class="accordion__icon"></span>
+                            <div class="accordion__header dflex">
+                                <span class="accordion__icon dflex aic jcc"><div class="icon-car"></div></span>
                                 <div class="accordion__header-content">
-                                    <span class="accordion__title">Truck</span>
-                                    <p class="accordion__description">Furniture & large items</p>
+                                    <span class="accordion__title">Car</span>
+                                    <p class="accordion__description">Parcels up to 20kg</p>
                                 </div>
                             </div>
                             <div class="accordion__content">
                                 <div class="content__item">
                                     <!-- place icon with pseudo elements -->
-                                    <p class="content__item-text">10 min free wait</p>
+                                    
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="services__image-container">
-                    <img src="#" alt="App screenshot of delivery options">
+                <div class="services__image-container dflex aie jcc">
+                    <img src="https://picsum.photos/536/654 " alt="App screenshot of delivery options">
                 </div>
             </div>
         </section>
@@ -189,7 +197,7 @@
                 </div>
                 <div class="advantages__grid-wrapper">
                     <div class="advantages__item advantages__item-left-top">
-                        <div class="advantages__item-icon"></div>
+                        <div class="advantages__item-icon"><div class="dollar"></div></div>
                         <div class="advantages__item-content">
                             <span class="advantages__item-title">Transparent Pricing</span>
                             <p class="advantages__item-description">See the exact cost before booking. Pay only for the
@@ -263,9 +271,9 @@
                         </cite>
                         <div class="testimonial__navigation">
                             <button type="button" class="nav-arrow nav-arrow-prev"
-                                aria-label="Previous testimonial"></button>
+                                aria-label="Previous testimonial"><div class="arrrow-left"></div></button>
                             <button type="button" class="nav-arrow nav-arrow-next"
-                                aria-label="Next testimonial"></button>
+                                aria-label="Next testimonial"><div class="arrow-right"></div></button>
                         </div>
                     </div>
 
@@ -286,6 +294,8 @@
                     <div class="faq__item faq__item-active">
                         <div class="faq__question">
                             <span>How do I book a delivery?</span>
+                            <!-- icons -->
+                            <div class="plus"></div><div class="minus"></div>
                         </div>
                         <div class="faq__answer">
                             <p>BeeClub delivers anything across Jeddah. Book in the app, track your order, get it
@@ -436,7 +446,25 @@
     </footer>
 
 
-
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
+
+<!-- 
+placeholder photos:
+https://picsum.photos/id/237/200/300
+https://picsum.photos/seed/picsum/200/300
+https://picsum.photos/200/300/?blur
+https://picsum.photos/536/354  galxy 
+https://picsum.photos/536/354  snow lake
+https://picsum.photos/536/354  canyon water
+https://picsum.photos/536/354    sunlight wheat
+https://picsum.photos/536/354   snowy forrest
+https://picsum.photos/536/354  water throuh hills
+
+logo:
+<svg width="50" height="40" viewBox="0 0 50 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M43 31L31 40H5L7 35L12 31H29L32 35L40 11L45 7H50L43 31ZM43 5L38 9H21L18 5L10 29L5 33H0L7 9L19 0H45L43 5ZM24 13H35L29 31L26 27H15L21 9L24 13Z" fill="white"></path>
+</svg>
+-->
