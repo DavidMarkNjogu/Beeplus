@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BeeClub</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/reponsive.css">
     <link rel="stylesheet" href="assets/css/components.css"> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tobiasroeder/lucide-icon-font@main/lucide.css">
+    <link href="https://fonts.cdnfonts.com/css/blitzwing?styles=119174,119173,119172,119171,119178,119177,119176,119175" rel="stylesheet">
+                
 
 
 </head>
@@ -15,36 +18,75 @@
 <body>
     <header class="header">
         <nav class="nav container dflex aic jcsb">
-            <a href="#" class="nav__logo" aria-label="BeeClub Logo">
-                <svg width="30" height="20" viewBox="0 0 50 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M43 31L31 40H5L7 35L12 31H29L32 35L40 11L45 7H50L43 31ZM43 5L38 9H21L18 5L10 29L5 33H0L7 9L19 0H45L43 5ZM24 13H35L29 31L26 27H15L21 9L24 13Z"
-                        fill="yellow"></path>
-                </svg>&nbsp;BeeCLub</a>
+            <a href="#" class="nav__logo dflex aic" aria-label="BeeClub Logo">BeeCLub</a>
             <ul class="nav__list dflex">
                 <li class="nav__item"><a href="#" class="nav__link">For Customers</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">For Couriers</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">About</a></li>
             </ul>
-            <div class="nav__actions">
-                <div class="nav__language-selector">
-
-                </div>
-                <a href="#" class="button button--secondary">Download App Now</a>
+            <div class="nav__actions dflex aic">
+            <div class="nav__language-selector">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+            </div>
+                <a href="#cta" class="button button--secondary nav__cta-button">Download App Now</a>
+                <button type="button" class="nav__hamburger" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </nav>
+
+          <!-- Mobile Menu -->
+        <div class="nav__mobile-menu">
+            <div class="nav__mobile-header dflex jcsb aic">
+                <a href="#" class="nav__logo" aria-label="BeeClub Logo">
+                    <svg width="30" height="20" viewBox="0 0 50 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M43 31L31 40H5L7 35L12 31H29L32 35L40 11L45 7H50L43 31ZM43 5L38 9H21L18 5L10 29L5 33H0L7 9L19 0H45L43 5ZM24 13H35L29 31L26 27H15L21 9L24 13Z"
+                            fill="yellow"></path>
+                    </svg>&nbsp;BeeCLub</a>
+                <button type="button" class="nav__close" aria-label="Close mobile menu">
+                    <div class="icon-x"></div>
+                </button>
+            </div>
+            <ul class="nav__mobile-list">
+                <li class="nav__mobile-item"><a href="#solution" class="nav__mobile-link">For Customers</a></li>
+                <li class="nav__mobile-item"><a href="#services" class="nav__mobile-link">For Couriers</a></li>
+                <li class="nav__mobile-item"><a href="#advantages" class="nav__mobile-link">About</a></li>
+                <li class="nav__mobile-item"><a href="#faq" class="nav__mobile-link">FAQ</a></li>
+            </ul>
+            <div class="nav__mobile-actions">
+                <a href="#cta" class="button button--primary">Download App Now</a>
+            </div>
+        </div>
+        <!-- Backdrop Overlay -->
+        <div class="nav__backdrop"></div>
     </header>
 
     <main>
         <section class="hero">
             <div class="hero__container container dflex jcsb">
+                 <!-- Left Side: Text -->
                 <div class="hero__text-content dflex fdc jcsb">
-                    <div class="hero__title">Jeddah's Fastest <img src="https://picsum.photos/seed/picsum/200/300" alt=""> Delivery App</div>
-                    <p class="hero__subheadline">Book delivery in 30 seconds. Track in real-time. Pay how you want.
-                        Documents, furniture, packages - we deliver everything across Jeddah.</p>
+                <div class="hero__title-wrapper">
+                    <h1 class="hero__title">
+                        <span class="hero__title-line">JEDDAH'S FASTEST</span>
+                        <span class="hero__title-line">DELIVERY APP</span>
+                    </h1>
+                    <div class="hero__title-pill">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        <span>50K+ Total Users</span>
+                    </div>
+                </div>
+                <p class="hero__subheadline">Book delivery in 30 seconds. Track in real-time. Pay how you want.
+                Documents, furniture, packages - we deliver everything across Jeddah.</p>
 
                     <div class="hero__cta dflex aic">
-                        <a href="#" class="button button--primary">Get 20% Off Now (30 Days Left)</a>
+                        <a href="#" class="button button--primary">
+                        Get 20% Off Now
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
                         <a href="" class="hero__learn-more">Learn More</a>
                     </div>
                     <div class="hero__stats dflex aic jcsb">
@@ -62,24 +104,31 @@
                         </div>
                     </div>
                 </div>
-                <div class="hero__image-content dflex">
+
+                
+            <!-- Right Side: Image + Floating Cards -->
+                <div class="hero__image-content dflex jcc aic">
                     <div class="hero__image-wrapper">
-                        <img src="https://picsum.photos/650/600" alt="BeeClub mobile app preview">
-                    </div>
-                    <div class="hero__floating-card hero__floating-card--one dflex fdc jcsb">
-                        <span class="hero__floating-card--one-icon"><div class="icon-users"></div></span>
-                        <div class="hero__floating-card-stats dflex fdc">
-                            <span class="hfc__stats__number">50k+</span>
-                            <span class="hfc__stats__label">Monthly Orders</span>
+                        <img src="assets/images/mobile_photo.jpg" alt="BeeClub mobile app preview">
+
+                        <!-- Floating Card 1 -->
+                        <div class="hero__floating-card hero__floating-card--one dflex fdc jcsb">
+                            <span class="hero__floating-card--one-icon"><div class="icon-users"></div></span>
+                            <div class="hero__floating-card-stats dflex fdc">
+                                <span class="hfc__stats__number">50k+</span>
+                                <span class="hfc__stats__label">Monthly Orders</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="hero__floating-card hero__floating-card--two dflex fdc jcsb">
-                        <div class="hfc__card__apps"></div>
-                        <div class="hfc__card__text-content">
-                            <span class="hfc__card__title">Get The App</span>
-                            <span class="hfc__card__description">Download our app & enjoy our services now</span>
+
+                        <!-- Floating Card 2 -->
+                        <div class="hero__floating-card hero__floating-card--two dflex fdc jcsb">
+                            <div class="hfc__card__apps"></div>
+                            <div class="hfc__card__text-content">
+                                <span class="hfc__card__title">Get The App</span>
+                                <span class="hfc__card__description">Download our app & enjoy our services now</span>
+                            </div>
+                            <a href="#" class="hfc__card__download-btn">Download Now</a>
                         </div>
-                        <a href="#" class="hfc__card__download-btn">Download Now</a>
                     </div>
                 </div>
             </div>
@@ -88,10 +137,18 @@
         <section class="solution">
             <div class="solution__container container dflex fdc jcc">
                 <span class="section__tag">What is BeeClub?</span>
-                <h2 class="section__title">INSTANT DELIVERY SOLUTION SPECIAL FOR YOU IN JEDDAH</h2>
+                <h2 class="section__headline">
+                <span class="section__headline-line section__headline-line--top">
+                    INSTANT DELIVERY SOLUTION
+                </span>
+                <span class="section__headline-line section__headline-line--bottom">
+                    SPECIAL FOR YOU IN JEDDAH
+                </span>
+                </h2>
+
                 <div class="solution__video-player">
                     <img src="assets/images/solution-image.jpeg" alt="Video thumbnail">
-                    <button type="button" class="video-player__play-button" aria-label="Play Video"><div class="play-circle"></div></button>
+                    <button type="button" class="video-player__play-button" aria-label="Play Video" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ"><div class="play-circle"></div></button>
                 </div>
                 <div class="solution__text-content dflex jcsb aic">
                     <p class="solution__desription">BeeClub delivers anything across Jeddah. Book in the app, track your
@@ -119,7 +176,7 @@
                                 </div>
                             </div>
                             <div class="accordion__content">
-                                <div class="content__item">
+                                <div class="content__item dflex aic ">
                                     <!-- will place random filler text -->
                                 </div>
                             </div>
@@ -134,18 +191,18 @@
                             </div>
                             <div class="accordion__content dflex">
                                 <!-- TO DO: Revisit the structure; maybe try to reduce markup -->
-                                <div class="content__item">
+                                <div class="content__item dflex aic ">
                                     <p class="content__item-text">10 min free wait</p>
                                 </div>
-                                <div class="content__item">
+                                <div class="content__item dflex aic ">
                                     <div class="check-circle-2"></div>
                                     <p class="content__item-text">Door-to-door</p>
                                 </div>
-                                <div class="content__item">
+                                <div class="content__item dflex aic ">
                                     <div class="check-circle-2"></div>
                                     <p class="content__item-text">Eco-friendly</p>
                                 </div>
-                                <div class="content__item">
+                                <div class="content__item dflex aic ">
                                     <div class="check-circle-2"></div>
                                     <p class="content__item-text">Up to 10kg</p>
                                 </div>
@@ -160,7 +217,7 @@
                                 </div>
                             </div>
                             <div class="accordion__content">
-                                <div class="content__item">
+                                <div class="content__item dflex aic ">
                                     <!-- place icon with pseudo elements -->
                                     <p class="content__item-text">10 min free wait</p>
                                 </div>
@@ -175,7 +232,7 @@
                                 </div>
                             </div>
                             <div class="accordion__content">
-                                <div class="content__item">
+                                <div class="content__item dflex aic ">
                                     <!-- place icon with pseudo elements -->
                                     
                                 </div>
@@ -245,7 +302,7 @@
                         </div>
                     </div>
                     <div class="advantages__center_image">
-                        <img src="https://picsum.photos/364/536" alt="BeeCLub Logo Full Display on Mobile">
+                        <img src="assets/images/mobile_photo.jpg" alt="BeeCLub Logo Full Display on Mobile">
                     </div>
                 </div>
                 <a href="#" class="button--secondary">EXPLORE MORE FEATURES</a>
@@ -278,8 +335,49 @@
                     </div>
 
                 </div>
-                <!-- TO DO : Add other testimonial items 
-             plus large quote icon -->
+   <div class="testimonial__item">
+                    <blockquote>
+                        "USED BEECLUB FOR AN URGENT DOCUMENT DELIVERY. DRIVER ARRIVED IN 15 MINUTES. PROFESSIONAL AND FAST SERVICE."
+                    </blockquote>
+                    <div class="testimonial__bottom dflex jcsb aic">
+                        <cite class="cite dflex jcsb aic">
+                            <div class="cite__image">
+                                <img src="assets/images/profile.jpg" alt="Testimonial author's image">
+                            </div>
+                            <div class="cite__content dflex fdc">
+                                <span class="cite__author">Fatima Al-Sayed</span>
+                                <span class="cite__desc">Business Owner in Jeddah.</span>
+                            </div>
+                        </cite>
+                        <div class="testimonial__nav dflex">
+                            <button type="button" class="nav-arrow nav-arrow-prev dflex aic jcc"
+                                aria-label="Previous testimonial"><div class="icon-arrow-left"></div></button>
+                            <button type="button" class="nav-arrow nav-arrow-next dflex aic jcc"
+                                aria-label="Next testimonial"><div class="icon-arrow-right"></div></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial__item">
+                    <blockquote>
+                        "MOVED MY ENTIRE APARTMENT WITH BEECLUB. THE TEAM WAS CAREFUL WITH EVERYTHING. HIGHLY RECOMMENDED!"
+                    </blockquote>
+                    <div class="testimonial__bottom dflex jcsb aic">
+                        <cite class="cite dflex jcsb aic">
+                            <div class="cite__image">
+                                <img src="assets/images/profile.jpg" alt="Testimonial author's image">
+                            </div>
+                            <div class="cite__content dflex fdc">
+                                <span class="cite__author">Ahmed Hassan</span>
+                                <span class="cite__desc">Software Engineer in Jeddah.</span>
+                            </div>
+                        </cite>
+                        <div class="testimonial__nav dflex">
+                            <button type="button" class="nav-arrow nav-arrow-prev dflex aic jcc"
+                                aria-label="Previous testimonial"><div class="icon-arrow-left"></div></button>
+                            <button type="button" class="nav-arrow nav-arrow-next dflex aic jcc"
+                                aria-label="Next testimonial"><div class="icon-arrow-right"></div></button>
+                        </div>
+                    </div>
             </div>
         </section>
 
@@ -291,11 +389,10 @@
                     <p class="faq__description">Reviews From Jeddah Resident's who use BeeClub Daily.</p>
                 </div>
                 <div class="faq__accordion">
-                    <div class="faq__item faq__item-active">
+                    <div class="faq__item faq__item--active">
                         <div class="faq__question dflex jcsb aic">
                             <span>How do I book a delivery?</span>
-                            <!-- icons -->
-                            <div class="plus"></div><div class="minus"></div>
+                            <div class="icon-plus"></div>
                         </div>
                         <div class="faq__answer">
                             <p>BeeClub delivers anything across Jeddah. Book in the app, track your order, get it
@@ -307,6 +404,7 @@
                     <div class="faq__item">
                         <div class="faq__question dflex jcsb aic">
                             <span>What payment methods do you accept?</span>
+                            <div class="icon-plus"></div>
                         </div>
                         <div class="faq__answer">
                             <p>We accept major credit and debit cards, including Visa and MasterCard. Digital wallets
@@ -318,6 +416,7 @@
                     <div class="faq__item">
                         <div class="faq__question dflex jcsb aic">
                             <span>How is the price calculated?</span>
+                            <div class="icon-plus"></div>
                         </div>
                         <div class="faq__answer">
                             <p>The total fee depends on the loading and unloading time required. Distance within Jeddah
@@ -329,6 +428,7 @@
                     <div class="faq__item">
                         <div class="faq__question dflex jcsb aic">
                             <span>What areas do you cover?</span>
+                            <div class="icon-plus"></div>
                         </div>
                         <div class="faq__answer">
                             <p>Our delivery service covers all neighborhoods across Jeddah. We operate 24/7 to ensure
@@ -339,6 +439,7 @@
                     <div class="faq__item">
                         <div class="faq__question dflex jcsb aic">
                             <span>Can I track my delivery?</span>
+                            <div class="icon-plus"></div>
                         </div>
                         <div class="faq__answer">
                             <p>Yes, you can track your delivery in real time through our app. This gives you live
@@ -349,6 +450,7 @@
                     <div class="faq__item">
                         <div class="faq__question dflex jcsb aic">
                             <span>What if I need help loading?</span>
+                            <div class="icon-plus"></div>
                         </div>
                         <div class="faq__answer">
                             <p>Our verified drivers can assist with loading and unloading. Just indicate your need for
@@ -359,6 +461,7 @@
                     <div class="faq__item">
                         <div class="faq__question dflex jcsb aic">
                             <span>Can I cancel my order?</span>
+                            <div class="icon-plus"></div>
                         </div>
                         <div class="faq__answer">
                             <p>You may cancel your order anytime before the driver arrives. Early cancellation helps
@@ -424,11 +527,23 @@
                 <div class="footer__socials dflex">
                     <div class="socials__column">
                         <h4>For Customers</h4>
-                        <div class="socials__icons"></div>
+                        <div class="socials__icons dflex">
+                            <a href="#" aria-label="Facebook"><div class="icon-facebook"></div></a>
+                            <a href="#" aria-label="Twitter"><div class="icon-twitter"></div></a>
+                            <a href="#" aria-label="Instagram"><div class="icon-instagram"></div></a>
+                            <a href="#" aria-label="LinkedIn"><div class="icon-linkedin"></div></a>
+                            <a href="#" aria-label="YouTube"><div class="icon-youtube"></div></a>
+                        </div>
                     </div>
                     <div class="socials__column">
                         <h4>For Partners</h4>
-                        <div class="socials__icons"></div>
+                        <div class="socials__icons dflex">
+                            <a href="#" aria-label="Facebook"><div class="icon-facebook"></div></a>
+                            <a href="#" aria-label="Twitter"><div class="icon-twitter"></div></a>
+                            <a href="#" aria-label="Instagram"><div class="icon-instagram"></div></a>
+                            <a href="#" aria-label="LinkedIn"><div class="icon-linkedin"></div></a>
+                            <a href="#" aria-label="YouTube"><div class="icon-youtube"></div></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -446,7 +561,7 @@
     </footer>
 
 
-    <script src="assets/js/script.js"></script>
+    <script defer src="assets/js/script.js"></script>
 </body>
 
 </html>
