@@ -43,13 +43,16 @@
     --container-width: 1200px;
     --container-padding: var(--space-sm);
 
-    /* 1.5. BORDERS & TRANSITIONS */  
-    --radius-xxs: 3px;    
-    --radius-xs: 6px;    
-    --radius-sm: 12px;    
+    /* 1.5. BORDERS & TRANSITIONS */
+    --radius-xxs: 3px;
+    --radius-xs: 6px;
+    --radius-sm: 12px;
     --radius-md: 16px;      /* For cards */
     --radius-pill: 999px;   /* For buttons */
     --transition-fast: 0.2s ease-in-out;
+    --transition-normal: 0.3s ease-in-out;
+    --transition-slow: 0.4s ease-in-out;
+    --easing-smooth: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ==========================================================================
