@@ -523,6 +523,18 @@ align-self: center;
 .testimonial__container{
     text-align: center;
 }
+
+.testimonial__item {
+    display: none;
+    opacity: 0;
+    transition: opacity var(--transition-slow);
+}
+
+.testimonial__item--active {
+    display: block;
+    opacity: 1;
+}
+
 .testimonial__item blockquote{
     font-size: 2.5rem;
     font-weight: var(--fw-extrabold);
