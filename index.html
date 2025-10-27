@@ -22,17 +22,49 @@
                         fill="yellow"></path>
                 </svg>&nbsp;BeeCLub</a>
             <ul class="nav__list dflex">
-                <li class="nav__item"><a href="#" class="nav__link">For Customers</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">For Couriers</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="#solution" class="nav__link">For Customers</a></li>
+                <li class="nav__item"><a href="#services" class="nav__link">For Couriers</a></li>
+                <li class="nav__item"><a href="#advantages" class="nav__link">About</a></li>
             </ul>
-            <div class="nav__actions">
+            <div class="nav__actions dflex aic">
                 <div class="nav__language-selector">
-
+                    <!-- Language selector placeholder -->
                 </div>
-                <a href="#" class="button button--secondary">Download App Now</a>
+                <a href="#cta" class="button button--secondary nav__cta-button">Download App Now</a>
+                <button type="button" class="nav__hamburger" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </nav>
+
+        <!-- Mobile Menu -->
+        <div class="nav__mobile-menu">
+            <div class="nav__mobile-header dflex jcsb aic">
+                <a href="#" class="nav__logo" aria-label="BeeClub Logo">
+                    <svg width="30" height="20" viewBox="0 0 50 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M43 31L31 40H5L7 35L12 31H29L32 35L40 11L45 7H50L43 31ZM43 5L38 9H21L18 5L10 29L5 33H0L7 9L19 0H45L43 5ZM24 13H35L29 31L26 27H15L21 9L24 13Z"
+                            fill="yellow"></path>
+                    </svg>&nbsp;BeeCLub</a>
+                <button type="button" class="nav__close" aria-label="Close mobile menu">
+                    <div class="icon-x"></div>
+                </button>
+            </div>
+            <ul class="nav__mobile-list">
+                <li class="nav__mobile-item"><a href="#solution" class="nav__mobile-link">For Customers</a></li>
+                <li class="nav__mobile-item"><a href="#services" class="nav__mobile-link">For Couriers</a></li>
+                <li class="nav__mobile-item"><a href="#advantages" class="nav__mobile-link">About</a></li>
+                <li class="nav__mobile-item"><a href="#faq" class="nav__mobile-link">FAQ</a></li>
+            </ul>
+            <div class="nav__mobile-actions">
+                <a href="#cta" class="button button--primary">Download App Now</a>
+            </div>
+        </div>
+
+        <!-- Backdrop Overlay -->
+        <div class="nav__backdrop"></div>
     </header>
 
     <main>
