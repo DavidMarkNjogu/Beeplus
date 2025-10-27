@@ -1,0 +1,335 @@
+/* ========================================
+   MOBILE STYLES (320px - 767px)
+   ======================================== */
+@media (max-width: 767px) {
+    /* Header & Navigation - Mobile */
+    .container {
+        padding-inline: var(--space-sm); /* 16px */
+    }
+    main > section:not(.hero) {
+        padding-block: var(--space-slg); /* 48px */
+    }
+    .nav {
+        height: 60px;
+    }
+    .nav__list {
+        display: none;
+    }
+    .nav__cta-button {
+        display: none;
+    }
+    .nav__hamburger {
+        display: flex;
+    }
+    main {
+        padding-top: 60px;
+    }
+
+    .hero__title,
+    .section__title {
+        font-size: 2rem;
+        line-height: 1.1;
+    }
+    h3,
+    .accordion__title {
+        font-size: 1.125rem; /* 18px */
+        line-height: 1.3;
+    }
+    body,
+    p {
+        font-size: 0.9375rem; /* 15px */
+        line-height: 1.6;
+    }
+     small,
+    .hero__subheadline,
+    .accordion__description {
+        font-size: 0.8125rem; /* 13px */
+        line-height: 1.5;
+    }
+      /* Hero Section */
+    .hero__container {
+        flex-direction: column;
+        gap: var(--space-lg);
+    }
+    .hero__text-content {
+        flex: 1 1 100%;
+        gap: var(--space-lg);
+    }
+    .hero__title {
+        /* font-size: 2rem; */
+    }
+    .hero__title img {
+        width: 100px;
+        height: 40px;
+    }
+    .hero__stats {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .stats__number {
+        font-size: 1.8rem;
+    }
+    .hero__image-content {
+        flex: 1 1 100%;
+    }
+    .hero__image-wrapper {
+        width: 90%;
+    }
+    /* .hero__floating-card--one {
+        width: 160px;
+        height: 120px;
+        top: 40%;
+    } */
+
+    /* SOLUTION SATART */
+    .solution__video-player {
+        height: 250px;
+        min-height: 250px;
+    }   
+    .solution__desription {
+        width: 100%;
+    }
+
+    /* SERVICES STRT */
+    .services__container {
+        flex-direction: column;
+        gap: var(--space-lg);
+    }
+    .services__content,
+    .services__image-container {
+        flex: 1 1 100%;
+    }
+    .services__image-container {
+        height: 300px;
+        order: 2;
+    }
+    .accordion__item {
+        padding: var(--space-sm);
+        margin-bottom: var(--space-sm);
+    }
+
+    /* ADVANTAGES START */
+    .advantages {
+        min-height: auto;
+    }
+    .advantages__grid-wrapper{
+        width: 100%;
+        height: auto;
+        position: static;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-sm);
+        margin-top: var(--space-sm);   
+    }
+    .advantages__center_image {
+        position: static;
+        transform: none;
+        width: 160px;
+        height: 200px;
+        margin: 0 auto var(--space-lg);
+    }
+    .advantages__item{
+        position: static;
+        transform: none;
+        width: 100%;
+        padding: var(--space-md);
+    }
+    .advantages__item-title{
+        font-size: 1rem;
+    }
+    .advantages__item-description{
+        font-size: 0.8rem;
+    }
+
+    /* TESTIMONIAL START */
+    .testimonial__item blockquote {
+        font-size: 1.5rem;
+        max-width: 100%;
+    }
+    .nav-arrow {
+        padding: var(--space-xs);
+    }
+
+    /* FAQ START */
+    .faq__container{
+        flex-direction: column;
+        gap: var(--space-lg);
+    }
+    .faq__header{
+        text-align: center;
+        margin-bottom: var(--space-md);
+    }
+    .faq__question{
+        font-size: 1rem;
+    }
+
+    /* CTA SECTION */
+    .cta__container {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+        padding: var(--space-lg);
+    }
+
+    /* FOOTER */
+    .footer__container,
+    .footer__top,
+    .footer__links,
+    .footer__app-stores,
+    .footer__socials{
+        flex-direction: column;
+    }
+    .footer__container{
+        text-align: center;
+    }
+    .footer__top, 
+    .footer__links{
+        gap: var(--space-lg);
+    }
+    .footer__app-stores{
+        align-items: center;
+    }
+    .footer__socials{
+        gap: var(--space-md);
+    }
+}
+
+
+/* ========================================
+   TABLET STYLES (768px - 1023px)
+   ======================================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hero__title {
+        font-size: 2.5rem;
+        line-height: 1.1;
+    }
+    .section__title{
+        font-size: 2.25rem;
+        line-height: 1.2;
+    }
+    h3,
+    .accordion__title {
+        font-size: 1.25rem;
+        line-height: 1.3;
+    }
+    .container {
+        padding-inline: var(--space-md);
+    }
+    main > section:not(.hero) {
+        padding-block: var(--space-xl);
+    }
+
+    /* HERO START */
+    .hero__text-content {
+        flex: 1 0 45%;
+    }
+    .hero__image-content {
+        flex: 0 0 55%;
+    }
+    .hero__floating-card {
+        transform: scale(0.8);
+    }
+    /* SOLN START */
+    .solution__video-player{
+        height: 440px;
+        min-height: 400px;
+    }
+    .solution__desription{
+        width: 50ch;
+    }
+
+    /* SERVICES STRT */
+    .services__image-container {
+        height: 400px;
+    }
+    .accordion__item {
+        margin-bottom: var(--space-sm);
+    }
+
+    /* ADVANTAGES ST */
+    .advantages__grid-wrapper {
+        width: 100%;
+        height: auto;
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+        margin-top: var(--space-lg);
+    }
+    .advantages__center_image{
+        position: static;
+        transform: none;
+        width: 180px;
+        height: 240px;
+        grid-column: 1/ -1;
+        margin: 0 auto var(--space-lg);
+    }
+    .advantages__item{
+        position: static;
+        transform: none;
+        width: 100%;
+    }
+
+    /* TESTIMONIAL ST */
+    .testimonial__item blockquote{
+        font-size: 2rem;
+    }
+
+    /* FAQ ST */
+    .faq__container{
+        gap: var(--space-xl);
+    }
+    .faq__header{
+        flex: 0 0 40%;
+    }
+    .faq__content{
+        flex: 1 1 60%;
+    }
+    .faq__question {
+        font-size: 1.125rem;
+    }
+
+    /* CTA ST */
+    .cta__container{
+        padding: var(--space-slg);
+    }
+
+    /* FOOTER ST */
+    .footer__top{
+        flex-wrap: wrap;
+    }
+    .footer__links{
+        gap: var(--space-lg);
+    }
+}
+
+/* ========================================
+   DESKTOP STYLES (1024px+)
+   ======================================== */
+@media(max-width: 1024px){
+    .hero__title {
+        font-size: 3.5rem;
+    }
+    .section__title {
+        font-size: 3rem;
+    }
+    .advantages__grid-wrapper {
+        width: 650px;
+        height: 650px;
+    }
+}
+
+/* ========================================
+   LARGE DESKTOP STYLES (1440px+)
+   ======================================== */
+@media (min-width: 1440px) {
+    .container{
+        max-width: 1400px;
+    }
+    .hero__title{
+        font-size: 4rem;
+    }
+    .section__title{
+        font-size: 3.5rem;
+    }
+}
