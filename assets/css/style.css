@@ -625,17 +625,37 @@ align-self: center;
 .faq__item{
     border-bottom: 1px solid var(--border-color);
     padding-block: var(--space-md);
+    transition: all var(--transition-fast);
 }
+
+.faq__item:hover {
+    background-color: rgba(255, 208, 0, 0.02);
+}
+
 .faq__question{
     font-size: 1.25rem;
     font-weight: var(--fw-bold);
     color: var(--text-primary);
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color var(--transition-fast);
 }
+
+.faq__question > div {
+    color: var(--primary-color);
+    transition: transform var(--transition-normal);
+}
+
+.faq__item-active .faq__question > div {
+    transform: rotate(45deg);
+}
+
 .faq__answer{
     max-height: 0;
     overflow: hidden;
-    transition: all 0.3s ease-out;
+    transition: max-height var(--transition-normal) ease-in-out, padding-top var(--transition-normal);
     padding-top: 0;
 }
 .faq__item-active .faq__answer{
