@@ -749,6 +749,37 @@ align-self: center;
 .footer__socials {
     gap: var(--space-xl);
 }
+
+.socials__column h4 {
+    font-size: 0.875rem;
+    font-weight: var(--fw-bold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-sm);
+}
+
+.socials__icons {
+    gap: var(--space-sm);
+}
+
+.socials__icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    color: var(--text-secondary);
+    transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.socials__icons a:hover {
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.socials__icons a > div {
+    font-size: 20px;
+}
+
 .footer__footnote{
     padding-top: var(--space-lg);
 }
