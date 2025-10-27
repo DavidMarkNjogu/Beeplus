@@ -667,3 +667,412 @@ align-self: center;
 .footer__footnote{
     padding-top: var(--space-lg);
 }
+
+/* ==========================================================================
+   RESPONSIVE STYLES & MEDIA QUERIES
+   ========================================================================== */
+
+/* Mobile-first approach with breakpoints:
+   - Base styles (320px+) - applied above
+   - Tablet (768px - 1023px)
+   - Desktop (1024px+)
+   - Large Desktop (1440px+)
+*/
+
+/* ========================================
+   MOBILE STYLES (320px - 767px)
+   Base styles are mobile-first
+   ======================================== */
+
+@media (max-width: 767px) {
+    /* Typography Responsive Scales */
+    .hero__title,
+    .section__title {
+        font-size: 2rem; /* 32px */
+        line-height: 1.1;
+    }
+
+    h3,
+    .accordion__title {
+        font-size: 1.125rem; /* 18px */
+        line-height: 1.3;
+    }
+
+    body,
+    p {
+        font-size: 0.9375rem; /* 15px */
+        line-height: 1.6;
+    }
+
+    small,
+    .hero__subheadline,
+    .accordion__description {
+        font-size: 0.8125rem; /* 13px */
+        line-height: 1.5;
+    }
+
+    /* Container & Section Spacing */
+    .container {
+        padding-inline: var(--space-sm); /* 16px */
+    }
+
+    main > section:not(.hero) {
+        padding-block: var(--space-slg); /* 48px */
+    }
+
+    /* Hero Section - Mobile */
+    .hero__container {
+        flex-direction: column;
+        gap: var(--space-lg);
+    }
+
+    .hero__text-content {
+        flex: 1 1 100%;
+        gap: var(--space-lg);
+    }
+
+    .hero__title {
+        font-size: 2rem;
+    }
+
+    .hero__title img {
+        width: 100px;
+        height: 40px;
+    }
+
+    .hero__stats {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .stats__number {
+        font-size: 1.8rem;
+    }
+
+    .hero__image-content {
+        flex: 1 1 100%;
+    }
+
+    .hero__image-wrapper {
+        width: 90%;
+    }
+
+    /* Hide second floating card on mobile */
+    .hero__floating-card--two {
+        display: none;
+    }
+
+    .hero__floating-card--one {
+        width: 160px;
+        height: 120px;
+        top: 40%;
+    }
+
+    /* Solution Section - Mobile */
+    .solution__video-player {
+        height: 250px;
+        min-height: 250px;
+    }
+
+    .solution__text-content {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--space-md);
+    }
+
+    .solution__desription {
+        width: 100%;
+    }
+
+    /* Services Section - Mobile */
+    .services__container {
+        flex-direction: column;
+        gap: var(--space-lg);
+    }
+
+    .services__content,
+    .services__image-container {
+        flex: 1 1 100%;
+    }
+
+    .services__image-container {
+        height: 300px;
+        order: 2;
+    }
+
+    .accordion__item {
+        padding: var(--space-sm);
+        margin-bottom: var(--space-sm);
+    }
+
+    /* Advantages Section - Mobile (Single Column Stack) */
+    .advantages {
+        min-height: auto;
+    }
+
+    .advantages__grid-wrapper {
+        width: 100%;
+        height: auto;
+        position: static;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-sm);
+        margin-top: var(--space-md);
+    }
+
+    .advantages__center_image {
+        position: static;
+        transform: none;
+        width: 160px;
+        height: 200px;
+        margin: 0 auto var(--space-lg);
+    }
+
+    .advantages__item {
+        position: static;
+        transform: none;
+        width: 100%;
+        padding: var(--space-md);
+    }
+
+    .advantages__item-title {
+        font-size: 1rem;
+    }
+
+    .advantages__item-description {
+        font-size: 0.8rem;
+    }
+
+    /* Testimonial Section - Mobile */
+    .testimonial__item blockquote {
+        font-size: 1.5rem;
+        max-width: 100%;
+    }
+
+    .cite__image {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav-arrow {
+        padding: var(--space-xs);
+    }
+
+    /* FAQ Section - Mobile */
+    .faq__container {
+        flex-direction: column;
+        gap: var(--space-lg);
+    }
+
+    .faq__header {
+        text-align: center;
+        margin-bottom: var(--space-md);
+    }
+
+    .faq__question {
+        font-size: 1rem;
+    }
+
+    /* CTA Section - Mobile */
+    .cta__container {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+        padding: var(--space-lg);
+    }
+
+    .cta__images-wrapper img:nth-child(3) {
+        display: none;
+    }
+
+    /* Footer - Mobile */
+    .footer__container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer_top {
+        flex-direction: column;
+        gap: var(--space-lg);
+    }
+
+    .footer__links {
+        flex-direction: column;
+        gap: var(--space-lg);
+    }
+
+    .footer__app-stores {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__socials {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+}
+
+/* ========================================
+   TABLET STYLES (768px - 1023px)
+   ======================================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Typography Responsive Scales */
+    .hero__title {
+        font-size: 2.5rem; /* 40px */
+        line-height: 1.1;
+    }
+
+    .section__title {
+        font-size: 2.25rem; /* 36px */
+        line-height: 1.2;
+    }
+
+    h3,
+    .accordion__title {
+        font-size: 1.25rem; /* 20px */
+        line-height: 1.3;
+    }
+
+    /* Container & Section Spacing */
+    .container {
+        padding-inline: var(--space-md); /* 24px */
+    }
+
+    main > section:not(.hero) {
+        padding-block: var(--space-xl); /* 64px */
+    }
+
+    /* Hero Section - Tablet */
+    .hero__text-content {
+        flex: 1 0 45%;
+    }
+
+    .hero__image-content {
+        flex: 0 0 55%;
+    }
+
+    .hero__floating-card {
+        transform: scale(0.8);
+    }
+
+    /* Solution Section - Tablet */
+    .solution__video-player {
+        height: 400px;
+        min-height: 400px;
+    }
+
+    .solution__desription {
+        width: 50ch;
+    }
+
+    /* Services Section - Tablet */
+    .services__image-container {
+        height: 400px;
+    }
+
+    .accordion__item {
+        margin-bottom: var(--space-sm);
+    }
+
+    /* Advantages Section - Tablet (2-Column Grid) */
+    .advantages__grid-wrapper {
+        width: 100%;
+        height: auto;
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+        margin-top: var(--space-lg);
+    }
+
+    .advantages__center_image {
+        position: static;
+        transform: none;
+        width: 180px;
+        height: 240px;
+        grid-column: 1 / -1;
+        margin: 0 auto var(--space-lg);
+    }
+
+    .advantages__item {
+        position: static;
+        transform: none;
+        width: 100%;
+    }
+
+    /* Testimonial Section - Tablet */
+    .testimonial__item blockquote {
+        font-size: 2rem;
+    }
+
+    /* FAQ Section - Tablet */
+    .faq__container {
+        gap: var(--space-xl);
+    }
+
+    .faq__header {
+        flex: 0 0 40%;
+    }
+
+    .faq__content {
+        flex: 1 1 60%;
+    }
+
+    .faq__question {
+        font-size: 1.125rem;
+    }
+
+    /* CTA Section - Tablet */
+    .cta__container {
+        padding: var(--space-slg);
+    }
+
+    /* Footer - Tablet */
+    .footer_top {
+        flex-wrap: wrap;
+    }
+
+    .footer__links {
+        gap: var(--space-lg);
+    }
+}
+
+/* ========================================
+   DESKTOP STYLES (1024px+)
+   Default styles are primarily desktop
+   ======================================== */
+
+@media (min-width: 1024px) {
+    /* Desktop-specific overrides if needed */
+    .hero__title {
+        font-size: 3.5rem;
+    }
+
+    .section__title {
+        font-size: 3rem;
+    }
+
+    /* Ensure desktop layout is maintained */
+    .advantages__grid-wrapper {
+        width: 650px;
+        height: 650px;
+    }
+}
+
+/* ========================================
+   LARGE DESKTOP STYLES (1440px+)
+   ======================================== */
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .hero__title {
+        font-size: 4rem;
+    }
+
+    .section__title {
+        font-size: 3.5rem;
+    }
+}
