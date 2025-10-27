@@ -861,6 +861,27 @@ main {
    ======================================== */
 
 @media (max-width: 767px) {
+    /* Header & Navigation - Mobile */
+    .nav {
+        height: 60px;
+    }
+
+    .nav__list {
+        display: none;
+    }
+
+    .nav__cta-button {
+        display: none;
+    }
+
+    .nav__hamburger {
+        display: flex;
+    }
+
+    main {
+        padding-top: 60px;
+    }
+
     /* Typography Responsive Scales */
     .hero__title,
     .section__title {
