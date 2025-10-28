@@ -13,170 +13,81 @@ hamburger.addEventListener("click", () => {
 
 // HEADER SCROLL EFFECT
 const header = document.querySelector(".header");
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 50) {
-    header.classList.add("header--scrolled");
-  } else {
-    header.classList.remove("header--scrolled");
-  }
-});
+    window.addEventListener("scroll", () => {
+        header.classList.toggle("header--scrolled", window.scrollY > 50);
+    });
 
-// SERVICES ACCORDION
-const serviceAccordionItems = document.querySelectorAll(
-  ".services .accordion__item"
-);
 
-function closeAllServAccordions() {
-  serviceAccordionItems.forEach((item) => {
-    item.classList.remove("accordion__item--active");
-    const content = item.querySelector(".accordion__content");
-    if (content) {
-      content.style.maxHeight = "0";
+// ACCORDIONS 
+const accordions = document.querySelectorAll(".accordion__item, .faq__item");
+    accordions.forEach(accordion => {
+        const header = accordion.querySelector(".accordion__header, .faq__question");
+        header.addEventListener("click", () => {
+            const isActive = accordion.classList.contains("accordion__item--active") || accordion.classList.contains("faq__item--active");
+            accordion.parentElement.querySelectorAll(".accordion__item--active, .faq__item--active").forEach(activeAcc => {
+                activeAcc.classList.remove("accordion__item--active", "faq__item--active");
+            });
+            if (!isActive) {
+                accordion.classList.add("accordion__item--active", "faq__item--active");
+            }
+        });
+    });
+
+    const defaultActiveService = document.querySelector('.services .accordion__item:nth-child(2)');
+    if (defaultActiveService) {
+        defaultActiveService.classList.add("accordion__item--active");
     }
-  });
-}
-
-function toggleServAccordion(service) {
-  const isActive = service.classList.contains("accordion__item--active");
-  const content = service.querySelector(".accordion__content");
-
-  closeAllServAccordions();
-  if (!isActive && content) {
-    service.classList.add("accordion__item--active");
-    content.style.maxHeight = content.scrollHeight + 50 + "px";
-  }
-}
-
-serviceAccordionItems.forEach((service) => {
-  const accordionHeader = service.querySelector(".accordion__header");
-  if (accordionHeader) {
-    accordionHeader.addEventListener("click", () =>
-      toggleServAccordion(service)
-    );
-  }
-});
-
-// default active accordion item will be  (Bike Courier - or rather, the 2nd item)
-if (serviceAccordionItems) {
-  const defaultContent = serviceAccordionItems[1].querySelector(
-    ".accordion__content"
-  );
-  if (defaultContent) {
-    serviceAccordionItems[1].classList.add("accordion__item--active");
-    defaultContent.style.maxHeight = defaultContent.scrollHeight + 50 + "px"; //the +50 is coz the first accordion failed to wrap, even though set, so I removed .jcsb and added gap plus jcfs
-  }
-}
-
-// FAQ ACCORDION
-const faqItems = document.querySelectorAll(".faq__item");
-
-function closeFAQs() {
-  faqItems.forEach((faq) => {
-    faq.classList.remove("faq__item--active");
-    const answer = faq.querySelector(".faq__answer");
-    if (answer) {
-      answer.style.maxHeight = "0";
-    }
-  });
-}
-
-function toggleFAQ(faq) {
-  const isActive = faq.classList.contains("faq__item--active");
-  const answer = faq.querySelector(".faq__answer");
-
-  closeFAQs();
-
-  if (!isActive && answer) {
-    faq.classList.add("faq__item--active");
-    answer.style.maxHeight = answer.scrollHeight + 50 + "px";
-  }
-}
-faqItems.forEach((faq) => {
-  const question = faq.querySelector(".faq__question");
-  if (question) {
-    question.addEventListener("click", () => toggleFAQ(faq));
-  }
-});
 
 // TESTIMONIAL
-const testimonialItems = document.querySelectorAll(".testimonial__item");
-const prevArrow = document.querySelector(".nav-arrow-prev");
-const nextArrow = document.querySelector(".nav-arrow-next");
-const testimonialContainer = document.querySelector(".testimonial");
+    const testimonials = document.querySelectorAll(".testimonial__item");
+    if (testimonials.length > 0) {
+        let currentIndex = 0;
+        let autoPlayInterval = setInterval(showNext, 5000);
 
-let currentTestimonialIndex = 0;
-let autoPlayInterval = null;
+        function updateTestimonials() {
+            testimonials.forEach((item, index) => {
+                item.classList.remove("testimonial__item--active");
+                if (index === currentIndex) {
+                    item.classList.add("testimonial__item--active");
+                }
+            });
+        }
 
-function showTestimonial(index) {
-  testimonialItems.forEach((testimonial) =>
-    testimonial.classList.remove("testimonial__item--active")
-  );
-  if (testimonialItems[index]) {
-    testimonialItems[index].classList.add("testimonial__item--active");
-  }
-}
+        function showNext() {
+            currentIndex = (currentIndex + 1) % testimonials.length;
+            updateTestimonials();
+        }
 
-function NextTestimonial() {
-  currentTestimonialIndex =
-    (currentTestimonialIndex + 1) % testimonialItems.length;
-  showTestimonial(currentTestimonialIndex);
-}
+        function showPrev() {
+            currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+            updateTestimonials();
+        }
 
-function PrevTestimonial() {
-  currentTestimonialIndex =
-    (currentTestimonialIndex - 1 + testimonialItems.length) %
-    testimonialItems.length;
-  showTestimonial(currentTestimonialIndex);
-}
+        document.querySelectorAll('.nav-arrow-next').forEach(btn => btn.addEventListener('click', () => {
+            showNext();
+            clearInterval(autoPlayInterval);
+            autoPlayInterval = setInterval(showNext, 5000);
+        }));
 
-function startAutoPlay() {
-  stopAutoPlay();
-  if (testimonialItems.length > 1) {
-    autoPlayInterval = setInterval(NextTestimonial, 5000);
-  }
-}
+        document.querySelectorAll('.nav-arrow-prev').forEach(btn => btn.addEventListener('click', () => {
+            showPrev();
+            clearInterval(autoPlayInterval);
+            autoPlayInterval = setInterval(showNext, 5000);
+        }));
 
-function stopAutoPlay() {
-  if (autoPlayInterval) {
-    clearInterval(autoPlayInterval);
-    autoPlayInterval = null;
-  }
-}
+        updateTestimonials();
+    }
 
-if (prevArrow) {
-  prevArrow.addEventListener("click", () => {
-    prevTestimonial();
-    startAutoPlay();
-  });
-}
-
-if (nextArrow) {
-  nextArrow.addEventListener("click", () => {
-    NextTestimonial();
-    startAutoPlay();
-  });
-}
-
-if (testimonialContainer) {
-  testimonialContainer.addEventListener("mouseenter", stopAutoPlay);
-  testimonialContainer.addEventListener("mouseleave", startAutoPlay);
-
-  testimonialContainer.addEventListener("touchstart", stopAutoPlay);
-}
-
-if (testimonialItems.length > 0) {
-  showTestimonial(0);
-  startAutoPlay();
-}
-
+    
 // VIDEO PLAYER
 const videoPlayBtn = document.querySelector(".video-player__play-button");
 const videoContainer = document.querySelector(".video-container");
+const videoThumbnail = document.querySelector(".solution__video-player img");
 
 if (videoPlayBtn && videoContainer) {
   videoPlayBtn.addEventListener("click", function () {
     let videoUrl = this.getAttribute("data-video-url");
-    // add mute param for autoplay to work reliably
+
     if (videoUrl && !videoUrl.includes("mute=1")) {
       videoUrl += (videoUrl.includes("?") ? "&" : "?") + "mute=1";
     }
@@ -184,13 +95,13 @@ if (videoPlayBtn && videoContainer) {
       const iframe = document.createElement("iframe");
       iframe.setAttribute("src", videoUrl);
       iframe.setAttribute("allowfullscreen", "");
-      iframe.setAttribute(
-        "allow",
-        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      );
+      iframe.setAttribute("allow", "autoplay; encrypted-media;");
       videoContainer.innerHTML = "";
       videoContainer.appendChild(iframe);
       this.style.display = "none";
+      if(videoThumbnail){ 
+        videoThumbnail.style.display = "none";
+      }
     }
   });
 }
