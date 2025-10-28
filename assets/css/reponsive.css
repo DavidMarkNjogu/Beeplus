@@ -1,4 +1,149 @@
 /* ========================================
+   LARGE DESKTOP STYLES (1440px+)
+   ======================================== */
+@media (min-width: 1440px) {
+    .container{
+        max-width: 1400px;
+    }
+    .hero__title{
+        font-size: 4rem;
+    }
+    .section__title{
+        font-size: 3.5rem;
+    }
+
+}
+
+
+
+/* ========================================
+   DESKTOP STYLES (1024px+)
+   ======================================== */
+@media(max-width: 1024px){
+    .hero__title {
+        font-size: 3.5rem;
+    }
+    .section__title {
+        font-size: 3rem;
+    }
+    .advantages__grid-wrapper {
+        width: 650px;
+        height: 650px;
+    }
+}
+
+
+
+/* ========================================
+   TABLET STYLES (768px - 1023px)
+   ======================================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hero__title {
+        font-size: 2.5rem;
+        line-height: 1.1;
+    }
+    .section__title{
+        font-size: 2.25rem;
+        line-height: 1.2;
+    }
+    h3,
+    .accordion__title {
+        font-size: 1.25rem;
+        line-height: 1.3;
+    }
+    .container {
+        padding-inline: var(--space-md);
+    }
+    main > section:not(.hero) {
+        margin-block: var(--space-xl);
+    }
+
+    /* HERO START */
+    .hero__text-content {
+        flex: 1 0 45%;
+    }
+    .hero__image-content {
+        flex: 0 0 55%;
+    }
+    .hero__floating-card {
+        transform: scale(0.8);
+    }
+    /* SOLN START */
+    .solution__video-player{
+        height: 440px;
+        min-height: 400px;
+    }
+    .solution__desription{
+        width: 50ch;
+    }
+
+    /* SERVICES STRT */
+    .services__image-container {
+        height: 400px;
+    }
+    .accordion__item {
+        margin-bottom: var(--space-sm);
+    }
+
+    /* ADVANTAGES ST */
+    /* .advantages__grid-wrapper {
+        width: 100%;
+        height: auto;
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+        margin-top: var(--space-lg);
+    }
+    .advantages__center_image{
+        position: static;
+        transform: none;
+        width: 180px;
+        height: 240px;
+        grid-column: 1/ -1;
+        margin: 0 auto var(--space-lg);
+    }
+    .advantages__item{
+        position: static;
+        transform: none;
+        width: 100%;
+    } */
+
+    /* TESTIMONIAL ST */
+    .testimonial__item blockquote{
+        font-size: 2rem;
+    }
+
+    /* FAQ ST */
+    .faq__container{
+        gap: var(--space-xl);
+    }
+    .faq__header{
+        flex: 0 0 40%;
+    }
+    .faq__content{
+        flex: 1 1 60%;
+    }
+    .faq__question {
+        font-size: 1.125rem;
+    }
+
+    /* CTA ST */
+    .cta__container{
+        padding: var(--space-slg);
+    }
+
+    /* FOOTER ST */
+    .footer__top{
+        flex-wrap: wrap;
+    }
+    .footer__links{
+        gap: var(--space-lg);
+    }
+}
+
+/* ========================================
    MOBILE STYLES (320px - 767px)
    ======================================== */
 @media (max-width: 767px) {
@@ -7,20 +152,35 @@
         padding-inline: var(--space-sm); /* 16px */
     }
     main > section:not(.hero) {
-        padding-block: var(--space-slg); /* 48px */
+        margin-block: var(--space-slg); /* 48px */
     }
-    .nav {
-        height: 60px;
-    }
+
     .nav__list {
-        display: none;
-    }
-    .nav__cta-button {
-        display: none;
-    }
-    .nav__hamburger {
-        display: flex;
-    }
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 280px;
+    background-color: var(--bg-primary);
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    padding: 2rem;
+    box-shadow: -3px 0 15px rgba(0,0,0,0.2);
+  }
+  .nav__list.active {
+    transform: translateX(0);
+  }
+  .nav__hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
     main {
         padding-top: 60px;
     }
@@ -110,7 +270,9 @@
 
     /* ADVANTAGES START */
     .advantages {
-        min-height: auto;
+        height: auto;
+        position: static;
+        margin-block: 10rem;
     }
     .advantages__grid-wrapper{
         width: 100%;
@@ -122,11 +284,7 @@
         margin-top: var(--space-sm);   
     }
     .advantages__center_image {
-        position: static;
-        transform: none;
-        width: 160px;
-        height: 200px;
-        margin: 0 auto var(--space-lg);
+        display: none;
     }
     .advantages__item{
         position: static;
@@ -190,146 +348,5 @@
     }
     .footer__socials{
         gap: var(--space-md);
-    }
-}
-
-
-/* ========================================
-   TABLET STYLES (768px - 1023px)
-   ======================================== */
-
-@media (min-width: 768px) and (max-width: 1023px) {
-    .hero__title {
-        font-size: 2.5rem;
-        line-height: 1.1;
-    }
-    .section__title{
-        font-size: 2.25rem;
-        line-height: 1.2;
-    }
-    h3,
-    .accordion__title {
-        font-size: 1.25rem;
-        line-height: 1.3;
-    }
-    .container {
-        padding-inline: var(--space-md);
-    }
-    main > section:not(.hero) {
-        padding-block: var(--space-xl);
-    }
-
-    /* HERO START */
-    .hero__text-content {
-        flex: 1 0 45%;
-    }
-    .hero__image-content {
-        flex: 0 0 55%;
-    }
-    .hero__floating-card {
-        transform: scale(0.8);
-    }
-    /* SOLN START */
-    .solution__video-player{
-        height: 440px;
-        min-height: 400px;
-    }
-    .solution__desription{
-        width: 50ch;
-    }
-
-    /* SERVICES STRT */
-    .services__image-container {
-        height: 400px;
-    }
-    .accordion__item {
-        margin-bottom: var(--space-sm);
-    }
-
-    /* ADVANTAGES ST */
-    .advantages__grid-wrapper {
-        width: 100%;
-        height: auto;
-        position: static;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--space-md);
-        margin-top: var(--space-lg);
-    }
-    .advantages__center_image{
-        position: static;
-        transform: none;
-        width: 180px;
-        height: 240px;
-        grid-column: 1/ -1;
-        margin: 0 auto var(--space-lg);
-    }
-    .advantages__item{
-        position: static;
-        transform: none;
-        width: 100%;
-    }
-
-    /* TESTIMONIAL ST */
-    .testimonial__item blockquote{
-        font-size: 2rem;
-    }
-
-    /* FAQ ST */
-    .faq__container{
-        gap: var(--space-xl);
-    }
-    .faq__header{
-        flex: 0 0 40%;
-    }
-    .faq__content{
-        flex: 1 1 60%;
-    }
-    .faq__question {
-        font-size: 1.125rem;
-    }
-
-    /* CTA ST */
-    .cta__container{
-        padding: var(--space-slg);
-    }
-
-    /* FOOTER ST */
-    .footer__top{
-        flex-wrap: wrap;
-    }
-    .footer__links{
-        gap: var(--space-lg);
-    }
-}
-
-/* ========================================
-   DESKTOP STYLES (1024px+)
-   ======================================== */
-@media(max-width: 1024px){
-    .hero__title {
-        font-size: 3.5rem;
-    }
-    .section__title {
-        font-size: 3rem;
-    }
-    .advantages__grid-wrapper {
-        width: 650px;
-        height: 650px;
-    }
-}
-
-/* ========================================
-   LARGE DESKTOP STYLES (1440px+)
-   ======================================== */
-@media (min-width: 1440px) {
-    .container{
-        max-width: 1400px;
-    }
-    .hero__title{
-        font-size: 4rem;
-    }
-    .section__title{
-        font-size: 3.5rem;
     }
 }
