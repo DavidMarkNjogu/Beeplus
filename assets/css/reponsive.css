@@ -328,14 +328,16 @@
         padding: var(--space-lg);
     }
 
-    /* FOOTER */
+}
+@media(max-width: 550px){
+     /* FOOTER */
     .footer {
         text-align: center;
     }
     .footer__top,
     .footer__externals,
     .footer__footnote {
-        /* flex-direction: column; */
+        flex-direction: column;
         align-items: center;
         gap: var(--space-xl);
     }
@@ -343,6 +345,7 @@
     .footer__top,
     .footer__app-stores
     {
+        flex-wrap: wrap;
         /* flex-direction: column; */
     }
     .footer__container{

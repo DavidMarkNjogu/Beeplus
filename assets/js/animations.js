@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     gsap.registerPlugin(ScrollTrigger);
 
-    // --- 1. HERO SECTION ENTRANCE ANIMATION ---
-    // This timeline runs once on page load for a polished introduction.
+    // --- 1. HERO
     const heroTl = gsap.timeline({ defaults: { ease: 'power3.out', duration: 1 } });
     heroTl
         .from('.hero__title-line', { y: 60, opacity: 0, stagger: 0.2 })
@@ -12,8 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .from('.hero__floating-card', { scale: 0.5, opacity: 0, stagger: 0.15, force3D: true }, '-=0.7')
         .from('.hero__image-wrapper', { y: 50, opacity: 0 }, '-=1');
 
-    // --- 2. UNIFIED SCROLL-TRIGGERED ANIMATIONS ---
-    // This single, efficient loop handles the fade-in effect for all designated elements.
+ 
     const animatedElements = document.querySelectorAll(
         '.section__tag, .section__headline, .section__title, .solution__text-content, .accordion__item, .testimonial__item, .faq__item, .advantages__container > .button--primary, .faq__header'
     );
@@ -23,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollTrigger: {
                 trigger: el,
                 start: 'top 85%',
-                toggleActions: 'play none none reverse' // Play on enter, reverse on scroll up
+                toggleActions: 'play none none reverse' 
             },
             opacity: 0,
             y: 50,
@@ -32,18 +30,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 3. SPECIFIC COMPONENT ANIMATIONS ---
 
-    // SERVICES SECTION: Pin the image on scroll (desktop only)
-    if (document.querySelector('.services__container') && window.innerWidth > 768) {
-        ScrollTrigger.create({
-            trigger: '.services__content',
-            start: 'top 10%', // Start pinning when the top of the content hits 10% from the top of the viewport
-            end: 'bottom bottom',
-            pin: '.services__image-container',
-            pinSpacing: 'margin' // Use margin to prevent content jump
-        });
-    }
+
+    // // SERVICES
+    // if (document.querySelector('.services__container') && window.innerWidth > 768) {
+    //     ScrollTrigger.create({
+    //         trigger: '.services__content',
+    //         start: 'top 10%', 
+    //         end: 'bottom bottom',
+    //         pin: '.services__image-container',
+    //         pinSpacing: 'margin' // Use margin to prevent content jump
+    //     });
+    // }
 
     // ADVANTAGES SECTION: Circular entrance effect (desktop only)
     if (window.innerWidth > 1024) {
